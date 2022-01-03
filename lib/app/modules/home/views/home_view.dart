@@ -8,14 +8,20 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Quran'),
+        backgroundColor: Colors.yellowAccent,
+        title: Text(
+          'QURAN',
+          style: TextStyle(
+              color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+        child: Image.network(
+          "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4b8eeb28758455.55d11abb5ffd7.png",
+          fit: BoxFit.fill,
         ),
       ),
     );
